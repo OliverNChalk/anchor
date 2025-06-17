@@ -5,13 +5,14 @@ use crate::{
     AccountDeserialize, Accounts, AccountsExit, Id, Key, Result, ToAccountInfos, ToAccountMetas,
 };
 use solana_program::account_info::AccountInfo;
-use solana_program::bpf_loader_upgradeable::{self, UpgradeableLoaderState};
+use solana_sdk_ids::bpf_loader_upgradeable;
 use solana_program::instruction::AccountMeta;
 use solana_program::pubkey::Pubkey;
 use std::collections::BTreeMap;
 use std::fmt;
 use std::marker::PhantomData;
 use std::ops::Deref;
+use crate::prelude::UpgradeableLoaderState;
 
 /// Type validating that the account is the given Program
 ///
